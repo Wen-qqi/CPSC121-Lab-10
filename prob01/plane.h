@@ -1,15 +1,18 @@
-// Please fill in below.
-// <Your name>
-// <Your section number> (e.g. CPSC 121L-01)
-// <Date>
-// <Your csu.fullerton.edu email>
-// <Your GitHub username>
+// Wen Fan
+// CPSC 121L - 11
+// April 15, 2024
+// WenFan@csu.fullerton.edu
+// @Wen-qqi
 //
 // Lab 10-1
 // If it is a pair programming lab please specify partner below.
 // Partner: @peteranteater
 
+#include <iostream>
 #include <string>
+
+#ifndef PLANE_H
+#define PLANE_H
 
 class Plane {
  public:
@@ -24,6 +27,14 @@ class Plane {
   //      passenger count, and flight destination and initializes
   //      each corresponding member variable appropriately.
   // ============================================================
+  Plane()
+      : seat_count_(121), passenger_count_(121), destination_("Fullerton") {}
+
+  Plane(int seat_count, int passenger_count, std::string destination)
+      : seat_count_(seat_count),
+        passenger_count_(passenger_count),
+        destination_(std::move(destination)) {}
+
   int GetPassengerCount() const {
     return passenger_count_;
   }
@@ -48,3 +59,4 @@ class Plane {
   int passenger_count_;
   std::string destination_;
 };
+#endif
