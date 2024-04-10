@@ -1,4 +1,17 @@
+// Wen Fan
+// CPSC 121L - 11
+// April 15, 2024
+// WenFan@csu.fullerton.edu
+// @Wen-qqi
+//
+// Lab 10-2
+// If it is a pair programming lab please specify partner below.
+// Partner: @peteranteater
+
 #include <string>
+
+#ifndef ACCOUNT_H
+#define ACCOUNT_H
 
 class Account {
  public:
@@ -16,3 +29,4 @@ class Account {
   std::string account_holder_;
   double balance_;
 };
+#endif
